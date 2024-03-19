@@ -147,7 +147,7 @@ const Header = () => {
                                         />
                                       )}
                                     </h6>
-                                    <p className="hidden whitespace-pre-line text-left text-[14px] font-light text-[#878B9E] lg:block">
+                                    <p className="hidden whitespace-pre-line text-left text-xs font-light text-[#878B9E] lg:block">
                                       {child.desc}
                                     </p>
                                   </div>
