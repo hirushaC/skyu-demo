@@ -134,17 +134,17 @@ const App = ({ Component, pageProps }) => {
     // return <LoadingPage onComplete={handleCountdownComplete} />;
   }
 
-  if (!initialLoadComplete) {
-    return <InitialLoad onComplete={handleInitialLoadComplete} />;
-  }
+  // if (!initialLoadComplete) {
+  //   return <InitialLoad onComplete={handleInitialLoadComplete} />;
+  // }
 
-  if (showWelcome) {
-    return (
-      <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "24px", textAlign: "center" }}>
-        <Image src='/images/logo.svg' width={200} height={200} alt='logo'/>
-      </div>
-    );
-  }
+  // if (showWelcome) {
+  //   return (
+  //     <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "24px", textAlign: "center" }}>
+  //       <Image src='/images/logo.svg' width={200} height={200} alt='logo'/>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
