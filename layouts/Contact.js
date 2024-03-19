@@ -158,7 +158,7 @@ const Contact = () => {
     <>
       <div className="grid md:grid-cols-2">
         <div className="bg-theme-light">
-          <header className={`relative left-0 top-0 z-50 py-[10px]`}>
+          <header className={`relative left-0 top-0 z-50 pt-5`}>
             <nav className="navbar container">
               {/* logo */}
               <div className="order-0 flex items-start">
@@ -169,9 +169,100 @@ const Contact = () => {
           <section className="section">
             <div className="container">
               <div className="relative">
-                <div className="text-center">
-                  <h1>Book a demo!</h1>
+                <div className="text-center sm:-mt-5 sm:text-left">
+                  <h2>
+                    Discover SkyU{" "}
+                    <span className="text-primary">in Action!</span>
+                  </h2>
                 </div>
+                <p className="my-5 text-sm leading-6">
+                  Welcome to our exclusive demo, where we invite you to witness
+                  the transformative power of SkyU firsthand. Whether
+                  you&apos;re looking to streamline your operations, enhance
+                  your productivity, or simply explore the latest in IT, our
+                  personalized demo is the perfect starting point.
+                </p>
+
+                <div>
+                  <h6>Why Book a Demo?</h6>
+                  {/* First line */}
+                  <div className={`flex flex-row items-start gap-2 px-5 py-2`}>
+                    <div className="mt-1 flex-none">
+                      <ImageFallback
+                        src={"/icons/tick_check.svg"}
+                        width={16}
+                        height={16}
+                        alt="tick"
+                      />
+                    </div>
+                    <p className={`flex-grow text-sm leading-6`}>
+                      <span className="font-medium">
+                        Tailored to Your Needs:
+                      </span>{" "}
+                      Our demos are not one-size-fits-all. We customize each
+                      session to focus on the challenges and opportunities
+                      specific to your business.
+                    </p>
+                  </div>
+                  {/* Second line */}
+                  <div className={`flex flex-row items-start gap-2 px-5 py-2`}>
+                    <div className="mt-1 flex-none">
+                      <ImageFallback
+                        src={"/icons/tick_check.svg"}
+                        width={16}
+                        height={16}
+                        alt="tick"
+                      />
+                    </div>
+                    <p className={`flex-grow text-sm leading-6`}>
+                      <span className="font-medium">Expert Guidance:</span> Be
+                      guided through SkyU by those who know it best. Our
+                      knowledgeable team will be there to answer your questions
+                      and show you how to make the most of our solution.
+                    </p>
+                  </div>
+                  {/* Third line */}
+                  <div className={`flex flex-row items-start gap-2 px-5 py-2`}>
+                    <div className="mt-1 flex-none">
+                      <ImageFallback
+                        src={"/icons/tick_check.svg"}
+                        width={16}
+                        height={16}
+                        alt="tick"
+                      />
+                    </div>
+                    <p className={`flex-grow text-sm leading-6`}>
+                      <span className="font-medium">
+                        See the Benefits Firsthand:
+                      </span>{" "}
+                      Discover how SkyU can make a difference in your daily
+                      operations through real-life scenarios and use cases.
+                    </p>
+                  </div>
+                  {/* Fourth line */}
+                  <div className={`flex flex-row items-start gap-2 px-5 py-2`}>
+                    <div className="mt-1 flex-none">
+                      <ImageFallback
+                        src={"/icons/tick_check.svg"}
+                        width={16}
+                        height={16}
+                        alt="tick"
+                      />
+                    </div>
+                    <p className={`flex-grow text-sm leading-6`}>
+                      <span className="font-medium">
+                        No Commitment Required:
+                      </span>{" "}
+                      Explore with no pressure. Our goal is to inform and
+                      inspire, not to push you into a decision.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="my-5 text-sm leading-6">
+                  This is just the beginning. Discover how SkyU can transform
+                  your business and let&apos;s embark on this journey together.
+                </p>
               </div>
             </div>
           </section>
@@ -181,9 +272,9 @@ const Contact = () => {
           <div className="container">
             <div className="relative">
               <div
-                className="calendly-inline-widget"
+                className="calendly-inline-widget overflow-auto"
                 data-url="https://calendly.com/skyu-io/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1695f1"
-                style={{ minWidth: "320px", height: "700px" }}
+                style={{ minWidth: "320px", height: "600px" }}
               ></div>
               <Script
                 src="https://assets.calendly.com/assets/external/widget.js"
