@@ -72,7 +72,7 @@ const Home = ({
         className={`section bg-white bg-dot-pattern bg-[length:20px_20px]`}
       >
         <div className="container">
-          <div className="animate relative">
+          <div className="relative">
             <WorkflowSection />
           </div>
         </div>
@@ -81,7 +81,7 @@ const Home = ({
       {/* Support section I */}
       <section className={`section bg-theme-light`}>
         <div className="container">
-          <div className="animate relative">
+          <div className="relative">
             <SupportSection bottlenecks={bottlenecks} />
           </div>
         </div>
@@ -90,7 +90,7 @@ const Home = ({
       {/* Support section II */}
       <section className="section bg-white">
         <div className="container">
-          <div className="animate relative">
+          <div className="relative">
             <ToggleSection intro={intro} />
           </div>
         </div>
@@ -99,7 +99,7 @@ const Home = ({
       {/* Stakeholder Section */}
       <section className="section bg-theme-light">
         <div className="container-xl">
-          <div className="animate relative">
+          <div className="relative">
             <StakeholderSection intro={intro} />
           </div>
         </div>
@@ -108,7 +108,7 @@ const Home = ({
       {/* Features Section */}
       <section className={`section bg-white`}>
         <div className="container-xl text-center">
-          <div className="animate relative">
+          <div className="relative">
             <FeaturesSection features={features} />
           </div>
         </div>
@@ -117,7 +117,7 @@ const Home = ({
       {/* Benefits Section*/}
       <section className={`section bg-theme-light`}>
         <div className="container">
-          <div className="animate relative mx-4">
+          <div className="relative mx-4">
             <BenefitsSection benefits={benefits} />
           </div>
         </div>
@@ -126,7 +126,7 @@ const Home = ({
       {/* Techstack banner Section */}
       <section className={`section`}>
         <div className="container">
-          <div className="animate relative">
+          <div className="relative">
             <LogoBannerSection brands={brands} />
           </div>
         </div>
@@ -135,7 +135,7 @@ const Home = ({
       {/* Toolchain Section */}
       <section className={`section bg-theme-light`}>
         <div className="container">
-          <div className="animate relative">
+          <div className="relative">
             <ToolChainSection speciality={speciality} />
           </div>
         </div>
