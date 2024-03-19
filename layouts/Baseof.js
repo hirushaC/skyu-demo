@@ -15,6 +15,7 @@ const Base = ({
   noindex,
   canonical,
   children,
+  showHeader = true,
 }) => {
   const { meta_image, meta_author, meta_description } = config.metadata;
   const { base_url } = config.site;
@@ -150,7 +151,7 @@ const Base = ({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
+      {showHeader && <Header />}
       {/* main site */}
       <main ref={main}>{children}</main>
       <Footer />

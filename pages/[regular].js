@@ -17,7 +17,8 @@ const RegularPages = ({ data , posts }) => {
   const { title, meta_title, description, image, noindex, canonical, layout } =
     data.frontmatter;
   const { content } = data;
-
+  const showHeader = layout !== "contact"; 
+  
   return (
     <Base
       title={title}
@@ -27,6 +28,7 @@ const RegularPages = ({ data , posts }) => {
       noindex={noindex}
       canonical={canonical}
       posts={posts}
+      showHeader={showHeader}
     >
       {layout === "404" ? (
         <NotFound data={data} />

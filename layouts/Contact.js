@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { FiCheckSquare, FiX } from "react-icons/fi";
 import ImageFallback from "./components/ImageFallback";
 import Cta from "./components/Cta";
+import Script from "next/script";
+import Logo from "./components/Logo";
 
 const SlideInNotifications = ({ notifications, removeNotif }) => {
   return (
@@ -154,28 +156,52 @@ const Contact = () => {
 
   return (
     <>
-      <section>
-        <div className="container">
-          <div className="animate relative">
+      <div className="grid md:grid-cols-2">
+        <div className="bg-theme-light">
+          <header className={`relative left-0 top-0 z-50 py-[10px]`}>
+            <nav className="navbar container">
+              {/* logo */}
+              <div className="order-0 flex items-start">
+                <Logo />
+              </div>
+            </nav>
+          </header>
+          <section className="section">
+            <div className="container">
+              <div className="relative">
+                <div className="text-center">
+                  <h1>Book a demo!</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section className="section">
+          <div className="container">
+            <div className="relative">
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/skyu-io/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1695f1"
+                style={{ minWidth: "320px", height: "700px" }}
+              ></div>
+              <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="afterInteractive"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* <section className="lg:pb-32">
+        <div className=" container">
+          <div className="relative">
             <div className="py-10 text-center">
               <p className="text-[#878B9E]">How can we help?</p>
               <h1>Send us a message !</h1>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section lg:pb-32">
-        <div className=" container">
-          <div className="animate relative">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-              {/* <ImageFallback
-              className="mx-auto lg:mx-10"
-              src="/images/vectors/contact.png"
-              width={497}
-              height={397}
-              alt=""
-            /> */}
+            
+            <div className="grid grid-cols-1 gap-10">
               <div className="grid auto-rows-auto">
                 <div>
                   <form method="POST" onSubmit={handleSubmit} netlify="true">
@@ -291,37 +317,20 @@ const Contact = () => {
                   </div>
                 </Link>
               </div>
-              <div className="grid auto-rows-auto">
-                {" "}
-                <div className="relative overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.56023697969977!2d79.85750228981111!3d6.894934525484294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259d35c055f0d%3A0x5631d2f666575ec!2sInsighture!5e0!3m2!1sen!2slk!4v1705662658727!5m2!1sen!2slk"
-                    width="600"
-                    height="550"
-                    allowFullScreen=""
-                    loading="eager"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
-                  ></iframe>
-                  <p className="mt-10 text-center leading-7 lg:text-left">
-                    15th floor, Colombo Innovation Tower,
-                    <br /> 477, R.A. De Mel Mawatha, Colombo 04,
-                    <br /> Sri Lanka
-                  </p>
-                </div>
-              </div>
             </div>
+            
           </div>
         </div>
-      </section>
+      </section> */}
+      </div>
 
-      <section className="section bg-theme-light">
+      {/* <section className="section bg-theme-light">
         <div className="container text-center">
           <div className="relative">
             <Cta />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
