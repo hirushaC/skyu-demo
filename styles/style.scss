@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @import "base";
+}
+
+@layer components {
+  @import "components";
+  @import "navigation";
+  @import "buttons";
+}
+
+@layer utilities {
+  @import "utilities";
+}
+
+@layer swiper {
+  @import '../node_modules/swiper/swiper.scss';
+  @import 'swiper/scss/pagination';
+  @import './swiper.scss';
+}
+
+
+.dark-theme {
+  @apply bg-[#11172C] text-white;
+}
+
+.light-theme {
+  @apply bg-theme-light text-[#202840];
+}

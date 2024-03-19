@@ -1,0 +1,130 @@
+{
+  "main": [
+    {
+      "name": "Platform",
+      "url": "/platform",
+      "image": "/images/video-popup.jpg"
+    },
+    {
+      "name": "Resources",
+      "url": "/about",
+      "image": "/images/video-popup.jpg",
+      "children": [
+        {
+          "name": "Blogs",
+          "desc": "Read about the most recent trends in Platform Engineering.",
+          "url": "/blogs/page/1",
+          "icon": "/icons/blogs.svg",
+          "image": "/images/features-02.png"
+        },
+        {
+          "name": "Developer hub",
+          "desc": "Tutorials, videos, and reference docs to help you deliver.",
+          "url": "https://docs.skyu.io/",
+          "icon": "/icons/skyu-docs.svg",
+          "image": "/images/features-01.png",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "url": "/blogs",
+      "image": "/images/video-popup.jpg",
+      "children": [
+        {
+          "name": "SkyU community",
+          "desc": "Join our dedicated Slack Channel for real-time assistance.",
+          "url": "/#",
+          "icon": "/icons/skyu-community.svg",
+          "image": "/images/video-popup.jpg"
+        },
+        {
+          "name": "FAQs",
+          "desc": "Get answers to the most frequently asked questions about SkyU.",
+          "url": "/faqs",
+          "icon": "/icons/faqs.svg",
+          "image": "/images/video-popup.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Solutions",
+      "url": "/blogs",
+      "image": "/images/video-popup.jpg",
+      "children": [
+        {
+          "name": "Platform Teams",
+          "desc": "Development workflows, best practices, and dev team boost.",
+          "url": "/solutions/platform-teams",
+          "icon": "/icons/platform-teams.svg",
+          "image": "/images/video-popup.jpg"
+        },
+        {
+          "name": "Developers",
+          "desc": "Automation, self-service provisioning, and standardised environments.",
+          "url": "/solutions/developers",
+          "icon": "/icons/developers.svg",
+          "image": "/images/video-popup.jpg"
+        },
+        {
+          "name": "Ops Teams",
+          "desc": "Seamless deployments, resource optimisation and efficient incident response.",
+          "url": "/solutions/ops-teams",
+          "icon": "/icons/ops.svg",
+          "image": "/images/video-popup.jpg"
+        },
+        {
+          "name": "C Suite",
+          "desc": "Enterprise infrastructure, developer ecosystem and digital business experiences.",
+          "url": "/solutions/c-suite",
+          "icon": "/icons/c-suite.svg",
+          "image": "/images/video-popup.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Company",
+      "url": "/about",
+      "image": "/images/video-popup.jpg",
+      "children": [
+        {
+          "name": "About us",
+          "desc": "Learn about the engineers and experts taking DevX skyward.",
+          "url": "/skyu-team",
+          "icon": "/icons/skyu-team.svg",
+          "image": "/images/features-02.png"
+        },
+        {
+          "name": "Upcoming features",
+          "desc": "Discover future power-ups on the horizon for SkyU.",
+          "url": "/upcoming-features",
+          "icon": "/icons/upcoming-features.svg",
+          "image": "/images/video-popup.jpg"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "name": "About",
+      "url": "/platform"
+    },
+    {
+      "name": "Blogs",
+      "url": "/blogs/page/1"
+    },
+    {
+      "name": "Terms & Conditions",
+      "url": "/terms-policy"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "name": "Security Policy",
+      "url": "/security-policy"
+    }
+  ]
+}

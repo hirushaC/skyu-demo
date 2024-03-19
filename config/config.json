@@ -1,0 +1,59 @@
+{
+  "site": {
+    "title": "Skyu.io",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.svg",
+    "logo_width": "240",
+    "logo_height": "34",
+    "logo_text": "skyu"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+
+  "params": {
+    "tag_manager_id": "GTM-N3QVLDFC",
+    "google_analytics_id": "G-2DFLKH5XHF",
+    "contact_form_action": "#",
+    "footer_content": "Unlock development with a powerful internal platform for streamlined DevOps workflows.",
+    "copyright": "©2024 Insighture All Rights Reserved"
+  },
+
+  "contact_info": {
+    "phone": "+94 112 301708",
+    "email": "hello@insighture.com",
+    "location": "Colombo Innovation Tower,<br/> 477, R.A. De Mel Mawatha, Colombo 04,<br/> Sri Lanka"
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "Contact us",
+    "link": "/contact"
+  },
+
+  "metadata": {
+    "meta_author": "Insighture",
+    "meta_image": "/images/logo.svg",
+    "meta_description": ""
+  },
+
+  "call_to_action": {
+    "enable": true,
+    "title": "Get Onboard SkyU",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
+    "button": {
+      "label": "Contact Us",
+      "link": "/contact"
+    }
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "skyu",
+    "settings": {}
+  }
+}
