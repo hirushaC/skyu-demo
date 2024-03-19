@@ -1,9 +1,9 @@
 
 .header-height-fix {
-  @apply sm:h-[80px] h-[50px];
+  @apply h-[50px];
 }
 .header {
-  @apply fixed left-0 w-full top-0 z-50 bg-white py-[10px] transition-all duration-500 ;
+  @apply fixed left-0 w-full top-0 z-50 bg-[#0368B1] py-[10px] transition-all duration-500 ;
 
   &-sticky {
     @apply py-[10px] bg-white;
@@ -35,6 +35,14 @@
 }
 
 .nav-link {
+  @apply p-3 text-[1rem] font-medium text-dark transition hover:text-theme-light lg:py-4 xl:px-3;
+
+  &.active {
+    @apply text-theme-light;
+  }
+}
+
+.nav-link-sticky {
   @apply p-3 text-[1rem] font-medium text-dark transition hover:text-primary lg:py-4 xl:px-3;
 
   &.active {
@@ -69,7 +77,7 @@
 .search-modal {
   @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-white opacity-0 transition md:h-full;
   .form-input {
-    @apply h-full w-full border-0 text-lg;
+    @apply h-full w-full border-0 text-xs;
   }
   .search-close {
     @apply absolute top-1/2 right-2 -translate-y-1/2 p-3 text-h4;
