@@ -7,7 +7,7 @@ import ImageFallback from "./components/ImageFallback";
 import SkeletonImage from "./components/SkeletonImage";
 import Post from "./partials/Post";
 import Animation2 from "./components/platform/animation2";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Platform = ({ data, posts }) => {
   const { frontmatter } = data;
@@ -113,20 +113,21 @@ const Platform = ({ data, posts }) => {
     <>
       {/* Hero section */}
       <section
-        className={`section bg-[#0368B1] flex items-center justify-center h-screen`}
+        className={`section flex h-screen items-center justify-center bg-[#0368B1]`}
       >
         <div className="container-xl z-10">
           <div className="relative text-center">
-            <div className="py-20 lg:mx-40 mx-5">
+            <div className="mx-5 py-20 lg:mx-40">
               <h1 className="lg:h1 h2 text-white">
                 Soar through releases with{" "}
-                <span className="text-[#11172C]">
-                  clear <br className="lg:block hidden" />
+                <span className="text-[#B9DFFB]">
+                  clear <br className="hidden lg:block" />
                   ownership
                 </span>{" "}
                 and a{" "}
-                <span className="text-[#11172C]">
-                  simple <br className="hidden sm:block"/> “code-to-commit” pathway
+                <span className="text-[#B9DFFB]">
+                  simple <br className="hidden sm:block" /> “code-to-commit”
+                  pathway
                 </span>
               </h1>
               <div className="banner-btn pt-10">
@@ -135,7 +136,7 @@ const Platform = ({ data, posts }) => {
                 </Link>
               </div>
 
-              <p className="py-10 lg:text-[18px] text-sm text-[#E2E4EB] lg:mx-10">
+              <p className="py-10 text-sm text-[#E2E4EB] lg:mx-10 lg:text-base">
                 {intro.subtitle}
               </p>
             </div>
@@ -157,27 +158,29 @@ const Platform = ({ data, posts }) => {
         }`}
       ></div>
 
-      <section className={`py-36 bg-theme-light ${darkTheme && "bg-[#272f47]"}`}>
+      <section
+        className={`bg-theme-light py-36 ${darkTheme && "bg-[#272f47]"}`}
+      >
         <div className="container">
           <div className="relative">
             <div className="grid-cols-3 lg:grid">
               <div className="mx-5 grid grid-rows-1">
                 <div className="flex items-center justify-center pb-6">
                   <div>
-                    <h1 className="text-center lg:text-left sm:h1 h4">
+                    <h2 className="sm:h2 h4 text-center lg:text-left">
                       Ascend to new heights{" "}
                       <span className="text-primary">with SkyU!</span>
-                    </h1>
+                    </h2>
 
-                    <p className="py-10 text-center lg:text-[18px] text-[#878B9E] lg:text-left">
+                    <p className="py-10 text-center text-base text-[#878B9E] lg:text-left">
                       {access.paragraph}
                     </p>
 
                     <div className="mt-5 border-l-2 border-primary pl-5">
-                      <p className="pb-1 font-normal text-[#878B9E]">
+                      <p className="pb-1 text-sm font-normal text-[#878B9E]">
                         Learn more about
                       </p>
-                      <div className="text-[22px] font-medium text-primary hover:text-[#0368B1]">
+                      <div className="text-lg font-medium text-primary hover:text-[#0368B1]">
                         <Link
                           className="justify-left flex w-full items-center gap-1"
                           href="https://docs.skyu.io/#industry-strength-integrations"
@@ -199,7 +202,7 @@ const Platform = ({ data, posts }) => {
                 <div className="h-full w-auto place-content-center place-self-center lg:grid">
                   <Animation2 />
                 </div>
-                <p className="py-5 text-center text-[18px] font-medium text-[#878B9E]">
+                <p className="py-5 text-center text-sm font-medium text-[#878B9E]">
                   {outro.subtitle}
                 </p>
               </div>
@@ -224,12 +227,12 @@ const Platform = ({ data, posts }) => {
             <div className="auto-cols-auto grid-flow-col lg:grid">
               {features.list.slice(0, 5).map((feature, index) => (
                 <React.Fragment key={index}>
-                  <h6
-                    className="cursor-pointer px-5 py-1 text-white"
+                  <p
+                    className="flex cursor-pointer items-center justify-center px-5 py-1 text-center text-sm font-medium text-white"
                     onClick={() => handleFeatureTitleClick(index)}
                   >
                     {feature.title}
-                  </h6>
+                  </p>
                 </React.Fragment>
               ))}
             </div>
@@ -239,33 +242,34 @@ const Platform = ({ data, posts }) => {
 
       <section className="section">
         <div className="container" ref={containerRef}>
-          <div className="relative animate">
+          <div className="animate relative">
             {features.list.map((feature, index) => (
               <React.Fragment key={index}>
                 <div
                   ref={sectionRefs.current[index]}
-                  className="sm:mx-auto mx-5 grid sm:grid-cols-2 place-items-center lg:py-24 md:py-20 sm:py-14 py-10"
+                  className="mx-5 grid place-items-center py-10 sm:mx-auto sm:grid-cols-2 sm:py-14 md:py-20 lg:py-24"
                   key={index}
                 >
-                  
                   <div
                     className={`${
                       index % 2 === 0 ? "lg:order-0" : "lg:order-1"
                     }`}
                   >
-                    <h2 className="py-4 sm:text-left text-center">{feature.title}</h2>
+                    <h2 className="py-4 text-center sm:text-left">
+                      {feature.title}
+                    </h2>
                     {/* <p>{feature.content}</p> */}
 
                     <React.Fragment>
                       {feature.content.length > 1 ? (
                         <div className="grid auto-cols-auto auto-rows-auto">
-                          <div className="flex flex-row flex-wrap gap-3 sm:justify-start justify-center">
+                          <div className="flex flex-row flex-wrap justify-center gap-3 sm:justify-start">
                             {feature.content.map((item, index) => (
                               <button
                                 key={index}
-                                className={`rounded-lg p-3 sm:text-base text-sm ${
+                                className={`rounded-lg p-3 text-sm sm:text-base ${
                                   index === selectedTab
-                                    ? "bg-[#0368B1] text-white"
+                                    ? "bg-primary text-white"
                                     : "bg-theme-light text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick(index)}
@@ -274,13 +278,13 @@ const Platform = ({ data, posts }) => {
                               </button>
                             ))}
                           </div>
-                          <p className="mt-5 sm:h-28 sm:text-left text-center">
+                          <p className="mt-5 text-center sm:h-28 sm:text-left">
                             {feature.content[selectedTab]?.subtitle}
                           </p>
                         </div>
                       ) : (
                         <>
-                          <div className="sm:text-left text-center">
+                          <div className="text-center sm:text-left">
                             {feature.content.map((item, index) => (
                               <p key={index}>{item.subtitle}</p>
                             ))}
@@ -291,14 +295,21 @@ const Platform = ({ data, posts }) => {
 
                     {feature.items && (
                       <>
-                        <div className="mt-6"><hr/></div>
+                        <div className="mt-6">
+                          <hr />
+                        </div>
                         <div className="mt-9 border-l-2 border-primary pl-5">
                           <p className="pb-1 font-normal text-[#878B9E]">
                             Learn more about
                           </p>
-                          <div className="font-medium divide-x-2">
+                          <div className="divide-x-2 font-medium">
                             {feature.items.map((btn, i) => (
-                              <div key={i} className={`inline-block py-1 pr-5 ${i % 2 !== 0 && 'pl-5'}`}>
+                              <div
+                                key={i}
+                                className={`inline-block py-1 pr-5 ${
+                                  i % 2 !== 0 && "pl-5"
+                                }`}
+                              >
                                 <Link
                                   className="justify-left flex w-full items-center gap-1"
                                   href={btn.link}
@@ -313,9 +324,7 @@ const Platform = ({ data, posts }) => {
                       </>
                     )}
                   </div>
-                  <div
-                    className={`mt-10`}
-                  >
+                  <div className={`mt-10`}>
                     <ImageFallback
                       className={`mx-auto`}
                       src={feature.thumbnail}
@@ -345,7 +354,7 @@ const Platform = ({ data, posts }) => {
               <h2>{blogs.title}</h2>
             </div>
             {posts.length > 0 ? (
-              <div className="row lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-center text-left grid">
+              <div className="row grid justify-center text-left sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {posts?.slice(0, 3).map((post, index) => (
                   <div key={"post-" + index} className="animate mt-16">
                     <Post post={post} />
