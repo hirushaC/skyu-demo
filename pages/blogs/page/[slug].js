@@ -60,13 +60,13 @@ const BlogPagination = ({ posts, currentPage, totalPages }) => {
 
   return (
     <Base>
-      <section className="bg-white sm:pt-1 section">
+      <section className="bg-white section">
         <div className="container">
           <div className="relative">
             {currentPosts.length > 0 ? (
               <>
                 {" "}
-                <div className={`row mx-3 mt-10 w-fit bg-transparent`}>
+                <div className={`row mx-3 w-fit bg-transparent`}>
                   <label className="mr-2">Filter by Category:</label>
                   <ReactSelect
                     isMulti
@@ -88,13 +88,11 @@ const BlogPagination = ({ posts, currentPage, totalPages }) => {
                     </div>
                   ))}
                 </div>
-                <div className="my-20 flex items-center justify-center">
+                <div className="mt-20 flex items-center justify-center">
                   <Pagination
                     totalPages={totalPages}
                     currentPage={currentPage}
                   />
-                  {console.log("total pages:", totalPages)}
-                  {console.log("current page:", currentPage)}
                 </div>
               </>
             ) : (
