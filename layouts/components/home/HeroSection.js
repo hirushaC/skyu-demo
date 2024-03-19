@@ -49,18 +49,24 @@ const HeroSection = ({ banner, stats }) => {
       <div className="flex flex-col items-center justify-between md:h-[100dvh] md:flex-row">
         <div className="flex h-[100dvh] max-h-screen flex-col items-center justify-center md:block md:h-fit md:w-1/2">
           <h1
-            className={`banner-title select-none text-[55px] text-white md:text-[64px] lg:text-[90px] lg:leading-tight`}
+            className={`select-none text-[55px] text-white md:text-[64px] lg:leading-tight`}
           >
             {banner.title}
           </h1>
-          <h1 className="banner-title -mt-6 select-none bg-gradient-to-tr from-[#11172C] via-[#333A4F] to-[#11172C] bg-clip-text text-[55px] text-transparent md:text-[64px] lg:text-[90px]">
-            <DynamicTextAnimation text={banner.animated_title} />
-          </h1>
-          <p className="banner-title animate mb-14 mt-5 text-center text-sm text-[#E2E4EB] md:text-left sm:text-lg sm:leading-8">
+          <div className="bg-white px-4 py-2 w-fit rounded-md">
+            <h1 className="select-none bg-gradient-to-tr from-[#11172C] via-[#333A4F] to-[#11172C] bg-clip-text text-[55px] text-transparent md:text-[64px]">
+              <DynamicTextAnimation text={banner.animated_title} />
+            </h1>
+          </div>
+
+          <p className="animate mb-10 mt-5 text-center text-sm text-[#E2E4EB] sm:text-lg sm:leading-8 md:text-left">
             {banner.description}
           </p>
-          <div className="banner-btn">
-            <Link className="btn btn-secondary font-medium" href={banner.link.href}>
+          <div>
+            <Link
+              className="btn btn-secondary font-medium"
+              href={banner.link.href}
+            >
               {banner.link.label}
             </Link>
           </div>
@@ -83,7 +89,7 @@ const HeroSection = ({ banner, stats }) => {
       </div>
 
       {/* Feature cards */}
-      <div className="animate container right-0 top-[98%] z-20 rounded-lg md:mb-40 sm:mt-16 md:block md:border md:bg-white md:py-6 md:shadow-lg lg:absolute">
+      <div className="animate container right-0 top-[98%] z-20 rounded-lg sm:mt-16 md:mb-40 md:block md:border md:bg-white md:py-6 md:shadow-lg lg:absolute">
         <div className="mx-auto grid w-full place-content-evenly gap-8 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:place-items-center">
           {stats.lists.map((stat, index) => (
             <div

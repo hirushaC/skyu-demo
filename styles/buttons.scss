@@ -8,14 +8,18 @@
   &::before {
     @apply absolute content-[""] bg-black/10 w-full h-0 left-0 top-0 transition-all duration-300 -z-[1];
   }
+}
 
-  // &:hover::before {
-  //   @apply bottom-0 top-auto h-full;
-  // }
+.btn-primary-sticky {
+  @apply text-primary rounded-[5px] transform transition-all delay-1000 hover:bg-gradient-to-r from-theme-light to-white overflow-hidden relative z-0;
+
+  &::before {
+    @apply absolute content-[""] bg-black/10 w-full h-0 left-0 top-0 transition-all duration-300 -z-[1];
+  }
 }
 
 .btn-secondary {
-  @apply bg-white text-[#0368B1] rounded-[5px] transform transition-all delay-1000 hover:bg-gradient-to-r from-theme-light to-white overflow-hidden relative z-0;
+  @apply bg-white text-[#0368B1] text-base rounded-[5px] transform transition-all delay-1000 hover:bg-gradient-to-r from-theme-light to-white overflow-hidden relative z-0;
 
   &::before {
     @apply absolute content-[""] bg-black/10 w-full h-0 left-0 top-0 transition-all duration-300 -z-[1];
