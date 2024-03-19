@@ -62,7 +62,7 @@ bottlenecks:
 intro:
   title: Blurred focus on core competencies
   description: Creating an IDP can be expensive in time, expertise, and resources. Pivoting to new tech, evolving business needs, and handling maintenance, security, and operations can shift attention away from the primary focus - application development.
-  subtitle: Spend more time delivering value to your customers through incredible digital experiences.
+  subtitle: Investment in innovation versus platform maintenance
   thumbnail: "/images/diagrams/diagram1.svg"
   wthumbnail: "/images/diagrams/diagram2.svg"
   list:

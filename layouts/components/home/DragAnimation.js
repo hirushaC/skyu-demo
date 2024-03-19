@@ -21,7 +21,7 @@ const DraggableLine = ({ width, height, containerHeight }) => {
 
   return (
     <motion.svg
-      width='86'
+      width="86"
       height={height}
       viewBox={`0 0 86 ${numericHeight}`}
       fill="none"
@@ -94,7 +94,7 @@ const DraggableLine = ({ width, height, containerHeight }) => {
   );
 };
 
-const DragAnimation = ({ leftImage, rightImage }) => {
+const DragAnimation = ({ leftImage, rightImage, subtitle }) => {
   const containerRef = useRef();
   const x = useMotionValue(0);
   const [svgSize, setSvgSize] = useState({ width: "86px", height: "700px" });
@@ -212,7 +212,9 @@ const DragAnimation = ({ leftImage, rightImage }) => {
 
   return (
     <>
-      <div className="mx-auto mb-10 sm:w-full w-2/3">
+      <p className="my-5 text-theme-dark text-xs text-center">{subtitle}</p>
+
+      <div className="mx-auto mb-10 w-2/3 sm:w-full">
         <PercentageLabel
           applicationPercent={applicationPercent}
           platformPercent={platformPercent}

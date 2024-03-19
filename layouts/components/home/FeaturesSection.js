@@ -15,10 +15,13 @@ const FeaturesSection = ({ features }) => {
         <div className="container">
           <div className="row items-center">
             <div className={`px-12 text-center`}>
-            <h2 className={`sm:h2 h4`}>
-                Our internal developer platform is 
-                <span className="text-primary"> designed to streamline</span> the
-                daily tasks of a DevOps engineer
+              <h2 className={`sm:h2 h4`}>
+                Our DevOps automation platform is
+                <span className="text-primary">
+                  {" "}
+                  designed to streamline
+                </span>{" "}
+                the daily tasks of a DevOps engineer
               </h2>
             </div>
           </div>
