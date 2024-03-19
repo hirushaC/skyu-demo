@@ -7,11 +7,11 @@ import ImageFallback from "../ImageFallback";
 
 const Tab = ({ id, title, description, image, darkTheme, index, inView }) => (
   <motion.div
-    className="items-center lg:h-[600px] flex flex-row"
+    className="items-center sm:h-[600px] flex flex-row"
     id={`tab-${id}`}
     style={{ scrollSnapAlign: "start" }}
     initial={{ opacity: 0 }}
-    animate={{ opacity: inView ? 1 : 0 }}
+    animate={{ opacity: inView ? 1 : 1 }}
     transition={{ duration: 0.5 }}
   >
     <div
@@ -130,7 +130,7 @@ const DesktopTabs = ({ tabs }) => {
   return (
     <>
       {/* Left Sidebar */}
-      <div className="flex flex-row h-[700px] overflow-hidden">
+      <div className="flex flex-row h-[700px]  overflow-hidden" id='container'>
         <motion.div
           className={`flex w-fit items-center justify-center bg-transparent border-r-2`}
           id="sidenav"
@@ -143,8 +143,7 @@ const DesktopTabs = ({ tabs }) => {
             {tabs.slice(0, 6).map((tab, index) => (
               <button
                 key={index}
-                onClick={() => changeTab(index)}
-                className={`my-2 w-64 whitespace-nowrap rounded-l-md pl-4 py-3 text-left font-medium lg:my-3 ${
+                className={`my-2 w-64 whitespace-nowrap rounded-l-md pl-4 py-3 text-left font-medium lg:my-3 cursor-default ${
                   index === activeTabIndex
                     ? "bg-primary text-white"
                     : "bg-white text-[#424B66]"
