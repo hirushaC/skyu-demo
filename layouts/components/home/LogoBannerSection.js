@@ -24,11 +24,11 @@ const LogoBannerSection = ({ brands }) => {
   return (
     <>
       <div className="px-4 pb-16 text-center">
-        <h1 className={`pt-6 sm:h1 h4`}>
+      <h2 className={`pt-6 sm:h2 h4`}>
           Integrations to{" "}
           <span className="text-primary">support any developer experience</span>{" "}
           you need
-        </h1>
+        </h2>
       </div>
       <div className={`mx-2`}>
         <div className="flex flex-col">

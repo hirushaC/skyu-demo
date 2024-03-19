@@ -26,10 +26,14 @@ const SupportSection = ({ bottlenecks }) => {
   return (
     <>
       <div className={`select-none px-5 text-left`}>
-        <h1 className={`sm:text-left text-center sm:h1 h4`}>{bottlenecks.subtitle}<br/>{bottlenecks.title}</h1>
+        <h2 className={`sm:h2 h4 text-center sm:text-left`}>
+          {bottlenecks.subtitle}
+          <br />
+          {bottlenecks.title}
+        </h2>
       </div>
 
-      <div className="mx-3 py-16 lg:grid lg:h-[600px] lg:grid-cols-[60%_40%] overflow-hidden">
+      <div className="mx-3 overflow-hidden py-16 lg:grid lg:h-[600px] lg:grid-cols-[60%_40%]">
         <div className="pr-4" id="section-1">
           {bottlenecks.list.map((bottleneck, index) => (
             <div key={"bottleneck-" + index}>
@@ -49,7 +53,7 @@ const SupportSection = ({ bottlenecks }) => {
           ))}
         </div>
         <div
-          className="relative mt-16 max-w-full lg:absolute lg:right-0 lg:mx-0 lg:mt-0 flex items-center justify-center lg:max-w-[40%]"
+          className="relative mt-16 flex max-w-full items-center justify-center lg:absolute lg:right-0 lg:mx-0 lg:mt-0 lg:max-w-[40%]"
           id="section-2"
         >
           <ImageFallback

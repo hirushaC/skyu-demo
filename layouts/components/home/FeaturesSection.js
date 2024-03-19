@@ -15,11 +15,11 @@ const FeaturesSection = ({ features }) => {
         <div className="container">
           <div className="row items-center">
             <div className={`px-12 text-center`}>
-              <h1 className={`sm:h1 h4`}>
+            <h2 className={`sm:h2 h4`}>
                 Our internal developer platform is 
                 <span className="text-primary"> designed to streamline</span> the
                 daily tasks of a DevOps engineer
-              </h1>
+              </h2>
             </div>
           </div>
         </div>

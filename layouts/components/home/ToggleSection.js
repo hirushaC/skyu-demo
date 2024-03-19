@@ -12,7 +12,7 @@ const ToggleSection = ({ intro }) => {
   return (
     <div className="lg:justify-left w-full lg:row lg:flex lg:items-center">
       <div className="px-8 text-center">
-        <h1 className={`pt-5 lg:pt-0 sm:h1 h4`}>{intro.title}</h1>
+      <h2 className={`pt-5 lg:pt-0 sm:h2 h4`}>{intro.title}</h2>
         {markdownify(intro.description, "p", "mt-5 text-[#878B9E] lg:mx-20")}
       </div>
 

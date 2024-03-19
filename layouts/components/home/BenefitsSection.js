@@ -4,10 +4,10 @@ const BenefitsSection = ({ benefits }) => {
   return (
     <>
       <div className={`mb-7 text-left`}>
-        <h1 className={`sm:text-left text-center sm:h1 h4`}>
+      <h2 className={`sm:text-left text-center sm:h2 h4`}>
           <span className="text-primary">The benefits of SkyU </span><br className="sm:hidden block"/>as a
           platform
-        </h1>
+        </h2>
       </div>
 
       <div className="row pt-11">

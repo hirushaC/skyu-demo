@@ -29,12 +29,12 @@ const StakeholderSection = ({intro}) => {
   return (
     <>
     <div className={`mx-auto px-6 py-10 text-center`}>
-      <h1 className='sm:h1 h4'>
-        Why <span className="text-[#0368B1]">build</span> when you can{" "}
+    <h2 className='sm:h2 h4'>
+        Why <span className="text-primary">build</span> when you can{" "}
         <span className="btn sm:rounded-lg rounded bg-primary p-1 px-2 font-medium text-white">
-          buy
-        </span>?
-      </h1>
+          buy?
+        </span>
+      </h2>
       <p className={`text-[#878B9E] sm:text-[20px] text-base`}>
       A cross-functional approach to DevOps
       </p>

@@ -8,10 +8,10 @@ const CaseStudies = ({ casestudies }) => {
     <div className="container text-center">
       <div className="aniamte relative">
         <div className="items-left justify-left text-left">
-          <h1 className={`mt-4 text-[#424B66] text-center sm:text-left sm:h1 h4`}>
+        <h2 className={`mt-4 text-[#424B66] text-center sm:text-left sm:h2 h4`}>
             {casestudies.title}
-          </h1>
-          {markdownify(casestudies.description, "p", "sm:mt-5 pb-8 text-center sm:text-left")}
+          </h2>
+          {markdownify(casestudies.description, "p", "pb-8 text-center sm:text-left")}
         </div>
         
         <div className={`flex items-center justify-center`}>
