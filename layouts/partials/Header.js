@@ -163,7 +163,7 @@ const Header = () => {
                   <li className="nav-item">
                     <Link
                       href={menu.url}
-                      className={`nav-link block ${sticky ? 'text-[#424B66]' : 'text-white' } ${
+                      className={`block ${sticky ? 'text-[#424B66] nav-link-sticky' : 'text-white nav-link' } ${
                         asPath === menu.url && "active"
                       }`}
                     >

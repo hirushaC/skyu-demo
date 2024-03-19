@@ -17,7 +17,7 @@ const Developers = ({ developers, casestudies }) => {
               <div className="justify-left grid place-items-center text-center">
                 <h1 className="text-white">
                   SkyU For{" "}
-                  <span className="text-[#11172C]">{developers.title}</span>
+                  <span className="text-[#B9DFFB]">{developers.title}</span>
                 </h1>
                 <p className="mx-3 py-3 text-light sm:text-[18px]">
                   {developers.subtitle}

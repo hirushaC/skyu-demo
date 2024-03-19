@@ -44,7 +44,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
               <div className="flex flex-col items-center justify-center text-center">
                 <h1 className="mx-3 text-white">
                   SkyU For{" "}
-                  <span className="text-[#11172C]">{platform_teams.title}</span>
+                  <span className="text-[#B9DFFB]">{platform_teams.title}</span>
                 </h1>
                 <p className="py-3 text-light sm:text-[18px]">
                   {platform_teams.subtitle}
