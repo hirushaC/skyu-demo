@@ -24,9 +24,11 @@
   },
 
   "contact_info": {
-    "phone": "+94 112 301708",
+    "phone": "+61 3 9005 6585",
+    "phone1": "+94 112 301708",
     "email": "hello@insighture.com",
-    "location": "Colombo Innovation Tower,<br/> 477, R.A. De Mel Mawatha, Colombo 04,<br/> Sri Lanka"
+    "location": "221 Queen Street,<br/> 2nd Floor Unit 8d, VIC,<br/> 3000,<br/> Australia",
+    "location1": "Colombo Innovation Tower,<br/> 477, R.A. De Mel Mawatha, Colombo 04,<br/> Sri Lanka"
   },
 
   "nav_button": {

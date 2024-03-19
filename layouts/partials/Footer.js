@@ -10,16 +10,16 @@ import Link from "next/link";
 
 const Footer = () => {
   const { copyright, footer_content } = config.params;
-  const { email, phone, location } = config.contact_info;
+  const { email, phone,phone1, location, location1 } = config.contact_info;
   const { darkTheme } = useTheme();
   return (
     <footer className="bg-[#292E41]">
       <div className="container">
-        <div className="grid sm:grid-cols-5 grid-cols-1 gap-3 pt-12 pb-6 text-center lg:text-left">
+        <div className="grid grid-cols-1 gap-3 pb-6 pt-12 text-center sm:grid-cols-5 lg:text-left">
           {/* section 1 */}
-          <div className="flex flex-col flex-wrap sm:items-start items-center justify-start sm:col-span-2">
-            <div className="p-8 rounded-xl bg-theme-light bg-opacity-5">
-              <div className="grid sm:place-items-start place-items-center">
+          <div className="flex flex-col flex-wrap items-center justify-start sm:col-span-2 sm:items-start">
+            <div className="rounded-xl bg-theme-light bg-opacity-5 p-8">
+              <div className="grid place-items-center sm:place-items-start">
                 <Link href="https://www.insighture.com/">
                   <ImageFallback
                     src="/images/logo_footer.svg"
@@ -36,7 +36,7 @@ const Footer = () => {
               )}
             </div>
 
-            <div className="sm:mr-11 mt-5">
+            <div className="my-5 sm:mr-11">
               <div className="grid place-items-center sm:place-items-start">
                 <p className="text-[14px] text-[#878B9E]">Powered by: </p>
                 <Link href="https://www.insighture.com/">
@@ -56,7 +56,13 @@ const Footer = () => {
 
           {/* section 2 */}
           <div className="px-5">
-            <h3 className={`h5 text-theme-light`}>Socials</h3>
+            <h3 className={`h5 mb-5 text-theme-light`}>Contact</h3>
+            <div className="flex flex-col flex-wrap text-[#E2E4EB]">
+              <Link href={`tel:${phone}`}>{phone}</Link>
+              <Link href={`tel:${phone1}`}>{phone1}</Link>
+              <Link href={`mailto:${email}`}>{email}</Link>
+            </div>
+            <h3 className={`h5 mt-5 text-theme-light`}>Socials</h3>
             <div className="font-normal text-[#E2E4EB]">
               <Social source={social} className="social-icons mt-5" />
             </div>
@@ -83,14 +89,17 @@ const Footer = () => {
           {/* section 4 */}
           <div className="flex flex-col flex-wrap px-5">
             <h3 className={`h5 text-theme-light`}>Location</h3>
-            <ul className="my-5 leading-10 text-[#E2E4EB]">
-              <li className="leading-6">{markdownify(location)}</li>
+            <ul className="my-5 flex flex-col gap-4 leading-10 text-[#E2E4EB]">
+              <div>
+                <li className="font-medium">Australia</li>
+                <li className="leading-6 text-sm">{markdownify(location)}</li>
+              </div>
+              <div>
+                <li className="font-medium">Sri Lanka</li>
+                <li className="leading-6 text-sm">{markdownify(location1)}</li>
+              </div>
             </ul>
-            <h3 className={`h5 mb-5 text-theme-light`}>Contact</h3>
-            <div className="flex flex-col flex-wrap text-[#E2E4EB]">
-              <Link href={`tel:${phone}`}>{phone}</Link>
-              <Link href={`mailto:${email}`}>{email}</Link>
-            </div>
+            
           </div>
         </div>
         {/* copyright */}
