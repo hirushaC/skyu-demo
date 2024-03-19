@@ -15,7 +15,7 @@ const PercentageLabel = ({ applicationPercent, platformPercent }) => {
           height: "100%",
         }}
       >
-        <span className="pl-4 text-[#73BFF7] sm:text-base text-xs">
+        <span className="pl-4 text-theme-dark sm:text-base text-xs">
           {roundedApplicationPercent}%
         </span>
       </div>
@@ -32,7 +32,7 @@ const PercentageLabel = ({ applicationPercent, platformPercent }) => {
     </div>
 
     {/* Linear component */}
-    <div className="row bg-[#73BFF7] sm:rounded-lg rounded" style={{ display: "flex" }}>
+    <div className="row sm:rounded-lg rounded" style={{ display: "flex" }}>
       <div
         style={{
           width: `${applicationPercent}%`,
@@ -40,9 +40,9 @@ const PercentageLabel = ({ applicationPercent, platformPercent }) => {
           alignItems: "center",
           height: "100%",
         }}
-        className="bg-[#73BFF7] sm:py-3 py-1 sm:rounded-l-lg rounded-l-md"
+        className="bg-[#E2E4EB] sm:py-3 py-1 rounded-l-full"
       >
-        <span className="pl-4 text-white sm:text-base text-xs">
+        <span className="pl-4 text-theme-dark sm:text-base text-xs">
           Application
         </span>
       </div>
@@ -53,7 +53,7 @@ const PercentageLabel = ({ applicationPercent, platformPercent }) => {
           alignItems: "center",
           height: "100%",
         }}
-        className="bg-primary sm:py-3 py-1 sm:rounded-r-lg sm:rounded-l-md rounded-r rounded-l"
+        className="bg-primary sm:py-3 py-1 rounded-r-full"
       >
         <span className="pr-4 text-white sm:text-base text-xs">Platform</span>
       </div>

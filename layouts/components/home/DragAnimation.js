@@ -142,7 +142,7 @@ const DragAnimation = ({ leftImage, rightImage }) => {
     const updateContainerHeight = () => {
       const vpWidth = window.innerWidth;
       if (vpWidth < 768) {
-        setContainerHeight("500px");
+        setContainerHeight("350px");
         setBarWidth("5px");
         setImageContainerPadding("75%");
       } else {
@@ -212,7 +212,7 @@ const DragAnimation = ({ leftImage, rightImage }) => {
 
   return (
     <>
-      <div className="mx-auto mb-10 sm:w-full w-[80%]">
+      <div className="mx-auto mb-10 sm:w-full w-2/3">
         <PercentageLabel
           applicationPercent={applicationPercent}
           platformPercent={platformPercent}
