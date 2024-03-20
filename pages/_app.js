@@ -22,7 +22,8 @@ const App = ({ Component, pageProps }) => {
   const [countdownComplete, setCountdownComplete] = useState(false);
   const [initialLoadComplete, setInitialLoadComplete] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
-  const showInitialLoaders = process.env.NEXT_PUBLIC_SHOW_INITIAL_LOADERS === 'true';
+  const showInitialLoaders =
+    process.env.NEXT_PUBLIC_SHOW_INITIAL_LOADERS === "true";
 
   useEffect(() => {
     // Check if the countdown completion state is stored (e.g., in localStorage)
@@ -46,64 +47,47 @@ const App = ({ Component, pageProps }) => {
   };
 
   useEffect(() => {
-    const link = document.createElement("link");
-    link.href = `https://fonts.googleapis.com/css2?family=${pf}${
-      sf ? "&family=" + sf : ""
-    }&display=swap`;
-    link.rel = "preload";
-    link.as = "style";
-
-    document.head.appendChild(link);
-
-    link.onload = () => {
-      link.rel = "stylesheet";
-    };
-
-    // handling an error for a critical resource
-    link.onerror = () => {
-      if (!sessionStorage.getItem("hasReloaded")) {
-        sessionStorage.setItem("hasReloaded", "true");
-        console.error("Critical resource failed to load, reloading the page.");
-        window.location.reload(true); // Force reload without cache
-      } else {
-        console.error("Critical resource failed again after reload.");
-      }
-    };
-  }, [pf, sf]);
-
-  // Hotjar initialization
-  useEffect(() => {
+    // Safe check for window object
     if (typeof window !== "undefined") {
-      const siteId = 3873265;
-      const hotjarVersion = 6;
+      // Google Fonts
+      const link = document.createElement("link");
+      link.href = `https://fonts.googleapis.com/css2?family=${pf}${
+        sf ? "&family=" + sf : ""
+      }&display=swap`;
+      link.rel = "stylesheet";
+      document.head.appendChild(link);
 
-      Hotjar.init(siteId, hotjarVersion);
+      // Local Storage operations
+      const storedCountdownComplete =
+        localStorage.getItem("countdownComplete") === "true";
+      setCountdownComplete(storedCountdownComplete);
+
+      // Hotjar
+      Hotjar.init(3873265, 6);
+
+      // Google Tag Manager
+      setTimeout(() => {
+        if (
+          process.env.NODE_ENV === "production" &&
+          config.params.tag_manager_id
+        ) {
+          TagManager.initialize({ gtmId: config.params.tag_manager_id });
+        }
+      }, 5000);
     }
-  }, []);
-
-  // google tag manager (gtm)
-  const tagManagerArgs = {
-    gtmId: config.params.tag_manager_id,
-  };
-  useEffect(() => {
-    setTimeout(() => {
-      process.env.NODE_ENV === "production" &&
-        config.params.tag_manager_id &&
-        TagManager.initialize(tagManagerArgs);
-    }, 5000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pf, sf]);
 
   // Google Analytics page view tracking
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag("config", config.params.google_analytics_id, {
-        page_path: url,
-      });
+      if (window.gtag) {
+        window.gtag("config", config.params.google_analytics_id, {
+          page_path: url,
+        });
+      }
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
-
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
@@ -141,8 +125,17 @@ const App = ({ Component, pageProps }) => {
 
   if (showWelcome && showInitialLoaders) {
     return (
-      <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "24px", textAlign: "center" }}>
-        <Image src='/images/logo.svg' width={200} height={200} alt='logo'/>
+      <div
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          fontSize: "24px",
+          textAlign: "center",
+        }}
+      >
+        <Image src="/images/logo.svg" width={200} height={200} alt="logo" />
       </div>
     );
   }
