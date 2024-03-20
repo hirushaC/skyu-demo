@@ -1,10 +1,10 @@
-import { Controls, Player } from "@lottiefiles/react-lottie-player";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import DynamicTextAnimation from "./DynamicTextAnimation";
-import HeroAnimationv1 from "./HeroAnimationv1";
-import { markdownify } from "@lib/utils/textConverter";
 import { useEffect, useState } from "react";
+import DynamicTextAnimation from "./DynamicTextAnimation";
+
+const LottiePlayer = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), { ssr: false });
+const LottieControls = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Controls), { ssr: false });
 
 const HeroSection = ({ banner, stats }) => {
   const [lottieSize, setLottieSize] = useState("100px");
@@ -46,18 +46,20 @@ const HeroSection = ({ banner, stats }) => {
   return (
     <>
       <div className="banner-bg"></div>
-      <div className="flex flex-col items-center justify-evenly md:h-[100dvh] lg:flex-row lg:justify-between">
+      <div className="flex flex-col items-center lg:justify-between justify-evenly md:h-[100dvh] lg:flex-row">
         <div className="flex h-[100dvh] max-h-screen flex-col items-center justify-center md:block md:h-fit lg:w-1/2">
-          <h1 className="select-none text-center text-[55px] leading-tight text-white md:text-[64px] lg:text-left">
+          <h1
+            className={`select-none text-[55px] text-center lg:text-left text-white md:text-[64px] leading-tight`}
+          >
             {banner.title}
           </h1>
+
           <div className="flex flex-row justify-center lg:justify-start">
-            <div className="w-fit rounded-md bg-white px-4 py-2">
-              <h1 className="select-none bg-gradient-to-tr from-[#11172C] via-[#333A4F] to-[#11172C] bg-clip-text text-[55px] text-transparent md:text-[64px]">
-                <DynamicTextAnimation text={banner.animated_title} />
-              </h1>
-            </div>
-          </div>
+          <div className="bg-white px-4 py-2 w-fit rounded-md">
+            <h1 className="select-none bg-gradient-to-tr from-[#11172C] via-[#333A4F] to-[#11172C] bg-clip-text text-[55px] text-transparent md:text-[64px]">
+              <DynamicTextAnimation text={banner.animated_title} />
+            </h1>
+          </div></div>
 
           <p className="animate mb-10 mt-5 text-center text-sm text-[#E2E4EB] sm:text-lg sm:leading-8 lg:text-left">
             {banner.description}
@@ -96,17 +98,17 @@ const HeroSection = ({ banner, stats }) => {
               className="flex flex-row items-center justify-center gap-2 rounded-md bg-white px-3 shadow-lg sm:px-0 sm:shadow-none"
               key={index}
             >
-              <Player
+              <LottiePlayer
                 autoplay
                 loop
                 src={stat.icon}
                 style={{ height: lottieSize, width: lottieSize }}
               >
-                <Controls
+                <LottieControls
                   visible={false}
                   buttons={["play", "repeat", "frame", "debug"]}
                 />
-              </Player>
+              </LottiePlayer>
               <div className="grid md:col-span-2">
                 <h4 className="lg:h4 h6">{stat.title}</h4>
                 <p className="text-xs text-[#878B9E] sm:text-base">
