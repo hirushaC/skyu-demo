@@ -26,27 +26,6 @@ const App = ({ Component, pageProps }) => {
     process.env.NEXT_PUBLIC_SHOW_INITIAL_LOADERS === "true";
 
   useEffect(() => {
-    // Check if the countdown completion state is stored (e.g., in localStorage)
-    const storedCountdownComplete =
-      localStorage.getItem("countdownComplete") === "true";
-    setCountdownComplete(storedCountdownComplete);
-  }, []);
-
-  const handleCountdownComplete = () => {
-    localStorage.setItem("countdownComplete", "true");
-    setCountdownComplete(true);
-  };
-
-  const handleInitialLoadComplete = () => {
-    setInitialLoadComplete(true);
-    setShowWelcome(true);
-
-    setTimeout(() => {
-      setShowWelcome(false);
-    }, 2000);
-  };
-
-  useEffect(() => {
     // Safe check for window object
     if (typeof window !== "undefined") {
       // Google Fonts
@@ -114,6 +93,20 @@ const App = ({ Component, pageProps }) => {
     window.addEventListener("load", checkStylesLoaded);
     return () => window.removeEventListener("load", checkStylesLoaded);
   }, []);
+
+  const handleCountdownComplete = () => {
+    localStorage.setItem("countdownComplete", "true");
+    setCountdownComplete(true);
+  };
+
+  const handleInitialLoadComplete = () => {
+    setInitialLoadComplete(true);
+    setShowWelcome(true);
+
+    setTimeout(() => {
+      setShowWelcome(false);
+    }, 2000);
+  };
 
   if (!countdownComplete && showInitialLoaders) {
     return <LoadingPage onComplete={handleCountdownComplete} />;
