@@ -46,23 +46,25 @@ const HeroSection = ({ banner, stats }) => {
   return (
     <>
       <div className="banner-bg"></div>
-      <div className="flex flex-col items-center justify-between md:h-[100dvh] md:flex-row">
-        <div className="flex h-[100dvh] max-h-screen flex-col items-center justify-center md:block md:h-fit md:w-1/2">
+      <div className="flex flex-col items-center lg:justify-between justify-evenly md:h-[100dvh] lg:flex-row">
+        <div className="flex h-[100dvh] max-h-screen flex-col items-center justify-center md:block md:h-fit lg:w-1/2">
           <h1
-            className={`select-none text-[55px] text-white md:text-[64px] lg:leading-tight`}
+            className={`select-none text-[55px] text-center lg:text-left text-white md:text-[64px] leading-tight`}
           >
             {banner.title}
           </h1>
+
+          <div className="flex flex-row justify-center lg:justify-start">
           <div className="bg-white px-4 py-2 w-fit rounded-md">
             <h1 className="select-none bg-gradient-to-tr from-[#11172C] via-[#333A4F] to-[#11172C] bg-clip-text text-[55px] text-transparent md:text-[64px]">
               <DynamicTextAnimation text={banner.animated_title} />
             </h1>
-          </div>
+          </div></div>
 
-          <p className="animate mb-10 mt-5 text-center text-sm text-[#E2E4EB] sm:text-lg sm:leading-8 md:text-left">
+          <p className="animate mb-10 mt-5 text-center text-sm text-[#E2E4EB] sm:text-lg sm:leading-8 lg:text-left">
             {banner.description}
           </p>
-          <div>
+          <div className="text-center lg:text-left">
             <Link
               className="btn btn-secondary font-medium"
               href={banner.link.href}

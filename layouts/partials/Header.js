@@ -176,7 +176,7 @@ const Header = () => {
             {config.nav_button.enable && (
               <li className="nav-item py-3 lg:hidden">
                 <Link
-                  className={`btn btn-primary bg-primary opacity-80 lg:flex`}
+                  className={`btn btn-primary ${sticky ? 'bg-primary btn-primary' : 'bg-white btn-primary-sticky'} opacity-100 lg:flex`}
                   href={config.nav_button.link}
                 >
                   {config.nav_button.label}
@@ -203,7 +203,7 @@ const Header = () => {
             {showMenu ? (
               <button
                 aria-label="Close menu"
-                className={`h-8 w-8 text-3xl text-[#424B66] lg:hidden`}
+                className={`h-8 w-8 text-3xl lg:hidden ${sticky ? 'text-[#424B66]' : 'text-white'}`}
                 onClick={() => setShowMenu(!showMenu)}
               >
                 <CgClose />
