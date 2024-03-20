@@ -22,6 +22,7 @@ const App = ({ Component, pageProps }) => {
   const [countdownComplete, setCountdownComplete] = useState(false);
   const [initialLoadComplete, setInitialLoadComplete] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
+  const showInitialLoaders = process.env.NEXT_PUBLIC_SHOW_INITIAL_LOADERS === 'true';
 
   useEffect(() => {
     // Check if the countdown completion state is stored (e.g., in localStorage)
@@ -130,21 +131,21 @@ const App = ({ Component, pageProps }) => {
     return () => window.removeEventListener("load", checkStylesLoaded);
   }, []);
 
-  if (!countdownComplete) {
-    // return <LoadingPage onComplete={handleCountdownComplete} />;
+  if (!countdownComplete && showInitialLoaders) {
+    return <LoadingPage onComplete={handleCountdownComplete} />;
   }
 
-  // if (!initialLoadComplete) {
-  //   return <InitialLoad onComplete={handleInitialLoadComplete} />;
-  // }
+  if (!initialLoadComplete && showInitialLoaders) {
+    return <InitialLoad onComplete={handleInitialLoadComplete} />;
+  }
 
-  // if (showWelcome) {
-  //   return (
-  //     <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "24px", textAlign: "center" }}>
-  //       <Image src='/images/logo.svg' width={200} height={200} alt='logo'/>
-  //     </div>
-  //   );
-  // }
+  if (showWelcome && showInitialLoaders) {
+    return (
+      <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: "24px", textAlign: "center" }}>
+        <Image src='/images/logo.svg' width={200} height={200} alt='logo'/>
+      </div>
+    );
+  }
 
   return (
     <>
