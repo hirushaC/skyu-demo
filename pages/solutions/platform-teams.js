@@ -38,7 +38,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
   return (
     <Base>
       <>
-        <section className="animate section grid h-screen place-items-center bg-[#0368B1] lg:py-40">
+        <section className="section grid h-screen place-items-center bg-[#0368B1] lg:py-40">
           <div className="container">
             <div className="relative">
               <div className="flex flex-col items-center justify-center text-center">
@@ -61,7 +61,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
 
         <section className="section bg-theme-light">
           <div className="container">
-            <div className="animate relative text-center">
+            <div className="relative text-center">
               <h3 className="font-normal">
                 <span className="leading-none">
                   Top performing organizations{" "}
@@ -81,7 +81,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
 
         <section className="section">
           <div className="container">
-            <div className="animate relative">
+            <div className="relative">
               <div className={`mx-auto`}>
                 <div
                   className={`sm:mx-5 cursor-default overflow-hidden bg-white`}
@@ -298,7 +298,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
 
         <section className="section bg-theme-light">
           <div className="container">
-            <div className="animate relative text-center">
+            <div className="relative text-center">
               <h3 className="font-medium">{platform_teams.fsubtitle}</h3>
               <div className="row">
                 <div className="row mx-auto flex items-center justify-center pt-11">
@@ -412,7 +412,7 @@ const PlatformTeams = ({ platform_teams, casestudies }) => {
           </div>
         </section>
 
-        <section className={`animate section`}>
+        <section className={`section`}>
           <CaseStudies casestudies={casestudies} />
         </section>
 

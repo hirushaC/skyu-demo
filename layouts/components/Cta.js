@@ -71,7 +71,7 @@ function Cta() {
   return (
     <div className="">
       <section
-        className={`animate box-shadow lg:grid grid-cols-3 auto-cols-auto items-center justify-center p-5 rounded-[16px] bg-[#0368B1]  sm:flex-row sm:px-16 sm:py-12`}
+        className={`box-shadow lg:grid grid-cols-3 auto-cols-auto items-center justify-center p-5 rounded-[16px] bg-[#0368B1]  sm:flex-row sm:px-16 sm:py-12`}
       >
         <div className="lg:col-span-2 text-center lg:text-left lg:pb-0 pb-36">
           <h2 className={`xs:text-[48px] xs:leading-[76.8px] w-full lg:text-[40px] text-35px font-medium text-white`}>

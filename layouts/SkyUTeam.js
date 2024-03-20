@@ -23,7 +23,7 @@ const SkyUTeam = ({ data }) => {
     <>
       <section className="section bg-[#0368B1]">
         <div className="container">
-          <div className="animate relative text-center">
+          <div className="relative text-center">
             <h1 className={`mb-4 text-theme-light`}>{about_us.title}</h1>
             {markdownify(
               about_us.content,
@@ -37,7 +37,7 @@ const SkyUTeam = ({ data }) => {
       <section className="section bg-white">
         <div className="container">
           <div className="row items-center justify-center gap-10">
-            <div className="animate grid gap-5 lg:col-6 lg:order-2">
+            <div className="grid gap-5 lg:col-6 lg:order-2">
               <ImageFallback
                 className="mx-auto w-full rounded-lg bg-auto object-cover lg:h-[400px]"
                 src={mission.image1}
@@ -46,7 +46,7 @@ const SkyUTeam = ({ data }) => {
                 alt="image 1"
               />
             </div>
-            <div className="animate text-center lg:col-5 lg:order-1 lg:text-left">
+            <div className="text-center lg:col-5 lg:order-1 lg:text-left">
               <h2 className="text-[#878B9E]">
                 {mission.title}
               </h2>
@@ -60,7 +60,7 @@ const SkyUTeam = ({ data }) => {
       <section className="bg-theme-light">
         <div className="container">
           <div className="flex flex-col items-center justify-center py-20">
-            <div className="animate grid lg:grid-cols-2 gap-10">
+            <div className="grid lg:grid-cols-2 gap-10">
               <ImageFallback
                 className="mx-auto rounded-lg"
                 src={mission.image2}

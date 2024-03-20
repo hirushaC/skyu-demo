@@ -356,7 +356,7 @@ const Platform = ({ data, posts }) => {
             {posts.length > 0 ? (
               <div className="row grid justify-center text-left sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {posts?.slice(0, 3).map((post, index) => (
-                  <div key={"post-" + index} className="animate mt-16">
+                  <div key={"post-" + index} className="mt-16">
                     <Post post={post} />
                   </div>
                 ))}

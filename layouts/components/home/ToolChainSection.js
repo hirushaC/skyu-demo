@@ -32,7 +32,7 @@ const ToolChainSection = ({ speciality }) => {
           <div className="flex flex-row items-center justify-center sm:justify-start flex-wrap gap-2 sm:mr-20">
             {speciality.map((item, index) => (
               <div key={index}>
-                <div className="animate rounded-md border border-[#C9CCD9] p-2 bg-white">
+                <div className="rounded-md border border-[#C9CCD9] p-2 bg-white">
                   <div className="flex items-center justify-start gap-1">
                     <ImageFallback
                       src={item.image}
@@ -49,7 +49,7 @@ const ToolChainSection = ({ speciality }) => {
         </div>
       </div>
       <div className="container z-10 flex items-center justify-center py-20 sm:my-0">
-        <div className="animate banner-img-container relative">
+        <div className="banner-img-container relative">
           <HeroAnimationv1 />
         </div>
       </div>

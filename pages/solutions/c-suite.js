@@ -11,7 +11,7 @@ const CSuite = ({ c_suite, casestudies }) => {
   return (
     <Base>
       <>
-        <section className="animate section grid h-screen place-items-center bg-[#0368B1]">
+        <section className="section grid h-screen place-items-center bg-[#0368B1]">
           <div className="container">
             <div className="relative">
               <div className="justify-left grid place-items-center text-center">
@@ -34,7 +34,7 @@ const CSuite = ({ c_suite, casestudies }) => {
 
         <section className="section bg-theme-light">
           <div className="container">
-            <div className="animate relative sm:mx-20 flex flex-col gap-5 text-center">
+            <div className="relative sm:mx-20 flex flex-col gap-5 text-center">
               <h3 className="font-medium">
                 Take care of your developers and Ops
                 <span className="leading-none">
@@ -59,7 +59,7 @@ const CSuite = ({ c_suite, casestudies }) => {
 
         <section className="section">
           <div className="container">
-            <div className="animate relative">
+            <div className="relative">
               <div className={`mx-auto`}>
                 <div
                   className={`sm:mx-5 cursor-default overflow-hidden bg-white`}
@@ -385,7 +385,7 @@ const CSuite = ({ c_suite, casestudies }) => {
           </div>
         </section>
 
-        <section className={`animate section`}>
+        <section className={`section`}>
           <CaseStudies casestudies={casestudies} />
         </section>
 

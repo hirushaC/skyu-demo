@@ -11,7 +11,7 @@ const OpsTeam = ({ ops_teams, casestudies }) => {
   return (
     <Base>
       <>
-        <section className="animate section grid h-screen place-items-center bg-[#0368B1]">
+        <section className="section grid h-screen place-items-center bg-[#0368B1]">
           <div className="container">
             <div className="relative">
               <div className="justify-left grid place-items-center text-center">
@@ -34,7 +34,7 @@ const OpsTeam = ({ ops_teams, casestudies }) => {
 
         <section className="section bg-theme-light">
           <div className="container">
-            <div className="animate relative sm:mx-20 flex flex-col gap-5 text-center">
+            <div className="relative sm:mx-20 flex flex-col gap-5 text-center">
               <h3 className="font-normal">
                 No more awkward tooling, processes and environments. <br /> The
                 future is{" "}
@@ -49,7 +49,7 @@ const OpsTeam = ({ ops_teams, casestudies }) => {
 
         <section className="section">
           <div className="container">
-            <div className="animate relative">
+            <div className="relative">
               <div className={`mx-auto`}>
                 <div
                   className={`sm:mx-5  cursor-default overflow-hidden bg-white`}
@@ -287,7 +287,7 @@ const OpsTeam = ({ ops_teams, casestudies }) => {
 
         <section className="section bg-theme-light">
           <div className="container">
-            <div className="animate relative text-center">
+            <div className="relative text-center">
               <div className="grid sm:grid-cols-2 mx-4 gap-9">
                 <div className="flex flex-col items-start justify-center">
                   <div className="mb-7">
@@ -317,7 +317,7 @@ const OpsTeam = ({ ops_teams, casestudies }) => {
           </div>
         </section>
 
-        <section className={`animate section bg-white`}>
+        <section className={`section bg-white`}>
           <CaseStudies casestudies={casestudies} />
         </section>
 

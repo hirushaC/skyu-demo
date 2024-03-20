@@ -11,7 +11,7 @@ const Developers = ({ developers, casestudies }) => {
   return (
     <Base>
       <>
-        <section className="animate section grid h-screen place-items-center bg-[#0368B1]">
+        <section className="section grid h-screen place-items-center bg-[#0368B1]">
           <div className="container">
             <div className="relative">
               <div className="justify-left grid place-items-center text-center">
@@ -34,7 +34,7 @@ const Developers = ({ developers, casestudies }) => {
 
         <section className="section bg-theme-light ">
           <div className="container">
-            <div className="animate relative text-center">
+            <div className="relative text-center">
               <h3 className="font-normal">
                 Deliver excellent digital experiences.
                 <br />
@@ -57,7 +57,7 @@ const Developers = ({ developers, casestudies }) => {
 
         <section className="section">
           <div className="container">
-            <div className="animate relative">
+            <div className="relative">
               <div className={`mx-auto`}>
                 {developers.details.map((card, index) => (
                   <div
@@ -212,7 +212,7 @@ const Developers = ({ developers, casestudies }) => {
           </div>
         </section>
 
-        <section className={`animate section`}>
+        <section className={`section`}>
           <CaseStudies casestudies={casestudies} />
         </section>
 
