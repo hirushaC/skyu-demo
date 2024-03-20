@@ -7,7 +7,7 @@ const ToolChainSection = ({ speciality }) => {
   return (
     <div className="grid grid-cols-1 md:mx-4 md:grid-cols-2">
       <div className="lg:justify-left lg:row lg:flex lg:items-center">
-        <div className="text-center lg:w-2/3 lg:text-left">
+        <div className="text-center lg:w-2/3 md:text-left">
         <h2 className={`pt-5 lg:pt-0 sm:h2 h3`}>Alpha release</h2>
           <h5 className={`text-primary sm:h5 h6`}>Discover our marketplace</h5>
           <p className="mt-5 font-normal text-[#878B9E]">

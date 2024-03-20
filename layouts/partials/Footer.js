@@ -15,11 +15,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#292E41]">
       <div className="container">
-        <div className="grid grid-cols-1 gap-3 pb-6 pt-12 text-center sm:grid-cols-5 lg:text-left">
+        <div className="grid grid-cols-1 lg:gap-3 md:gap-6 sm:gap-8 gap-10 pb-6 pt-12 text-center md:grid-cols-2 lg:grid-cols-5 lg:text-left">
           {/* section 1 */}
           <div className="flex flex-col flex-wrap items-center justify-start sm:col-span-2 sm:items-start">
             <div className="rounded-xl bg-theme-light bg-opacity-5 p-8">
-              <div className="grid place-items-center sm:place-items-start">
+              <div className="grid lg:place-content-start md:place-items-center sm:place-items-start place-items-center">
                 <Link href="https://www.insighture.com/">
                   <ImageFallback
                     src="/images/logo_footer.svg"
@@ -32,11 +32,11 @@ const Footer = () => {
               {markdownify(
                 footer_content,
                 "p",
-                "my-3 sm:mr-11 text-[#E2E4EB] font-normal sm:text-base text-sm"
+                "my-3 lg:mr-11 text-[#E2E4EB] font-normal sm:text-base text-sm"
               )}
             </div>
 
-            <div className="my-5 sm:mr-11">
+            <div className="my-5 sm:mr-11 sm:w-full flex justify-center lg:justify-start">
               <div className="grid place-items-center sm:place-items-start">
                 <p className="text-[14px] text-[#878B9E]">Powered by: </p>
                 <Link href="https://www.insighture.com/">
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           {/* section 2 */}
-          <div className="px-5">
+          <div className="lg:px-5 text-center sm:text-left">
             <h3 className={`h5 mb-5 text-theme-light`}>Contact</h3>
             <div className="flex flex-col flex-wrap text-[#E2E4EB]">
               <Link href={`tel:${phone}`}>{phone}</Link>
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* section 3 */}
-          <div className="flex flex-col flex-wrap px-5">
+          <div className="flex flex-col flex-wrap lg:px-5 text-center sm:text-left">
             <h3 className={`h5 text-theme-light`}>Quick Links</h3>
             {/* footer menu */}
             <ul className="mt-5 leading-8 text-[#E2E4EB]">
@@ -87,9 +87,9 @@ const Footer = () => {
           </div>
 
           {/* section 4 */}
-          <div className="flex flex-col flex-wrap px-5">
+          <div className="flex flex-col flex-wrap lg:px-5 text-center sm:text-left">
             <h3 className={`h5 text-theme-light`}>Location</h3>
-            <ul className="my-5 flex flex-col gap-4 leading-10 text-[#E2E4EB]">
+            <ul className="my-5 flex flex-col md:flex-row lg:flex-col gap-4 leading-10 text-[#E2E4EB]">
               <div>
                 <li className="font-medium">Australia</li>
                 <li className="leading-6 text-sm">{markdownify(location)}</li>
