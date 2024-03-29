@@ -3,7 +3,7 @@ User-agent: *
 Disallow:
 
 # Host
-Host: https://verdant-bavarois-dedf67.netlify.app
+Host: https://demo4testing.netlify.app
 
 # Sitemaps
-Sitemap: https://verdant-bavarois-dedf67.netlify.app/sitemap.xml
+Sitemap: https://demo4testing.netlify.app/sitemap.xml
