@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Disallow:
+Allow:
 
 # Host
 Host: https://demo4testing.netlify.app
