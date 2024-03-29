@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Disallow: /
+Disallow:
 
 # Host
 Host: https://verdant-bavarois-dedf67.netlify.app
