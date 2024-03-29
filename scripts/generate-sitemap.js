@@ -13,7 +13,7 @@ const client = createClient({
 });
 
 const SITEMAP_PATH = path.join(__dirname, '..', 'public', 'sitemap.xml');
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://verdant-bavarois-dedf67.netlify.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://demo4testing.netlify.app/";
 
 const STATIC_PAGES = [
   { path: '/pages/index.js', url: '/' },

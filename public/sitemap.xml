@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//</loc>
+          <lastmod>2024-03-19</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//platform</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//faqs</loc>
+          <lastmod>2024-03-17</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//skyu-team</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//upcoming-features</loc>
+          <lastmod>2024-03-18</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//contact</loc>
+          <lastmod>2024-03-19</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//solutions/platform-teams</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//solutions/developers</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//solutions/ops-teams</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//solutions/c-suite</loc>
+          <lastmod>2024-03-20</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//blogs/maximizing-devops-efficiency-by-streamlining-deployments-with-gitops</loc>
+          <lastmod>2024-02-07</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//blogs/compliance-security-and-policies-associated-with-a-public-sector-enterprise</loc>
+          <lastmod>2023-12-15</lastmod>
+        </url>
+      
+        <url>
+          <loc>https://demo4testing.netlify.app//blogs/dora-metrics-and-engineering-excellence-achieving-faster-releases</loc>
+          <lastmod>2024-02-07</lastmod>
+        </url>
+      
+    </urlset>
